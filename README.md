@@ -14,7 +14,7 @@ The core of this repo is a small component called `deviceDetector` with three ma
 
 The component's API is pretty straightforward: it has two attributes of type Aura.Component[] called "mobile" and "desktop" which you can use to pass in any content that should be displayed only on one platform. 
 
-### Using deviceDetector inside any other
+### Using deviceDetector inside any other component
 
 Here's an example of how you can use this component inside another one where you want to have this component's features: 
 
@@ -42,3 +42,7 @@ Here's an example of how you can use this component inside another one where you
     </c:deviceDetector>
 </aura:component>
 ```
+
+### Extending deviceDetector
+
+You can extend deviceDetector as you can do with any other extensible Lightning Component. If you want to learn more, please read the documentation about [Object-Oriented Development for Lightning Components](https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/oo_intro.htm).
