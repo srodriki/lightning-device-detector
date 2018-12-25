@@ -1,0 +1,17 @@
+<aura:component extensible="true">
+    <aura:attribute name="desktop" type="Aura.Component[]"/>
+    <aura:attribute name="mobile" type="Aura.Component[]"/>
+    
+    <!-- Render content for all platforms -->
+    {!v.body}
+    
+    <aura:if isTrue="{!$Browser.formFactor != 'DESKTOP'}">
+        <!-- Render mobile-only content -->
+        {!v.mobile}
+
+        <aura:set attribute="else">
+            <!-- Render desktop-only content -->
+            {!v.desktop}
+        </aura:set>
+    </aura:if>
+</aura:component>	
